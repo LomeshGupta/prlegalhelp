@@ -1,0 +1,103 @@
+.section1 {
+  /* z-index: -1; */
+  /* transform: translate(0,-10%); */
+}
+
+.heading {
+  position: absolute;
+  top: 25%;
+  font-size: 400%;
+  color: #323232;
+  font-family: "EB Garamond";
+  left: 10%;
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+.heading2 {
+  position: absolute;
+  top: 52%;
+  font-size: 200%;
+  color: #323232;
+  font-family: Sans-serif;
+  left: 17%;
+  animation: 2s ease-out 0s 1 slideInFromLeft;
+}
+
+.btn {
+  position: absolute;
+  top: 55%;
+  font-size: 200%;
+  color: #323232;
+  font-family: Sans-serif;
+  right: 10%;
+}
+
+.servicebtn {
+  background-color: #003c64;
+  border: none;
+  border-radius: 5%;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 70%;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: 1s;
+}
+.servicebtn:hover {
+  background-color: #640000;
+}
+.imgdiv1 {
+  display: none;
+}
+.imgdiv {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .imgdiv {
+    display: none;
+  }
+  .imgdiv1 {
+    display: block;
+  }
+  .heading {
+    font-size: 200%;
+    top: 30%;
+  }
+  .heading2 {
+    font-size: 80%;
+    top: 45%;
+    font-weight: 500;
+  }
+  .btn {
+    font-size: 130%;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
