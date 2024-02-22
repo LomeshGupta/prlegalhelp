@@ -21,7 +21,7 @@ const Home = () => {
           can resolve issues early and amicably.
         </div>
         <div className="btn">
-          <a className="servicebtn" href="#">
+          <a className="servicebtn" href="#" rel="noreferrer">
             see services
           </a>
         </div>

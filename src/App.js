@@ -9,7 +9,7 @@ const App = () => {
   return (
     <Router>
       <Navbar />
-      <Home rel="noreferrer" />
+      <Home />
       <main className="main-content">
         <Routes>{/* Define other routes that you need*/}</Routes>
       </main>

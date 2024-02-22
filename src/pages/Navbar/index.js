@@ -30,32 +30,36 @@ const Navbar = () => {
               </div>
             </li>
             <li className="nav__item">
-              <NavLink to="/" className="nav__link">
+              <NavLink to="/" rel="noreferrer" className="nav__link">
                 Home
               </NavLink>
             </li>
             <li className="nav__item">
-              <NavLink to="/news" className="nav__link">
+              <NavLink to="/news" rel="noreferrer" className="nav__link">
                 News
               </NavLink>
             </li>
             <li className="nav__item">
-              <NavLink to="/about-us" className="nav__link">
+              <NavLink to="/about-us" rel="noreferrer" className="nav__link">
                 About Us
               </NavLink>
             </li>
             <li className="nav__item">
-              <NavLink to="/favorite" className="nav__link">
+              <NavLink to="/favorite" rel="noreferrer" className="nav__link">
                 Favorite
               </NavLink>
             </li>
             <li className="nav__item">
-              <NavLink to="/location" className="nav__link">
+              <NavLink to="/location" rel="noreferrer" className="nav__link">
                 Location
               </NavLink>
             </li>
             <li className="nav__item">
-              <NavLink to="/get-started" className="nav__link nav__cta">
+              <NavLink
+                to="/get-started"
+                rel="noreferrer"
+                className="nav__link nav__cta"
+              >
                 Contact Us
               </NavLink>
             </li>
