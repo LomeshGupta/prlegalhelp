@@ -59,32 +59,34 @@
   width: 100%;
 }
 
-.box.second {
+.second {
   /* background-color: #e3dfd6; */
   color: #2a2525;
-  background: #e3dfd6;
-  background: linear-gradient(to left, #e3dfd6 50%, black 50%) right;
-  background-size: 200%;
-  transition: 1s ease-out;
+  background-size: 100% 200%;
+  background-image: linear-gradient(to bottom, #e3dfd6 50%, black 50%);
+  -webkit-transition: background-position 1s;
+  -moz-transition: background-position 1s;
+  transition: background-position 1s;
 }
 
 .second:hover {
   color: #f6f0f0;
-  background-position: left;
+  background-position: 0 -100%;
 }
 
 .box.third {
   /* background-color: #ffffff; */
   color: #2a2525;
-  background: #e3dfd6;
-  background: linear-gradient(to right, #e3dfd6 50%, black 50%) left;
-  background-size: 200%;
-  transition: 1s ease-out;
+  background-size: 100% 200%;
+  background-image: linear-gradient(to bottom, #ffffff 50%, black 50%);
+  -webkit-transition: background-position 1s;
+  -moz-transition: background-position 1s;
+  transition: background-position 1s;
 }
 
 .third:hover {
   color: #f6f0f0;
-  background-position: right;
+  background-position: 0 -100%;
 }
 
 .box.fourth {
@@ -131,18 +133,18 @@
 }
 
 @media (max-width: 900px) {
-  .containerexpetise{
+  .containerexpetise {
     flex-direction: column;
   }
-  .row{
+  .row {
     flex-direction: column;
   }
-  .box{
+  .box {
     width: 100%;
     font-size: 30px;
     margin-bottom: 20px;
   }
-  .box.active{
+  .box.active {
     font-size: 18px;
     padding: 5%;
   }
