@@ -53,12 +53,17 @@
 }
 .imgdiv1 {
   display: none;
+  width: 100%;
 }
 .imgdiv {
   display: block;
+  width: 100%;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 600px) {
+  .section1{
+    width: 100%;
+  }
   .imgdiv {
     display: none;
   }
@@ -97,9 +102,4 @@
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
 }

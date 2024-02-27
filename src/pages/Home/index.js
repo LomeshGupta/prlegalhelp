@@ -7,7 +7,7 @@ import Slideshow from "./slideshow";
 const Home = () => {
   return (
     <section class="section1">
-      <div>
+      <div className="con">
         <div class="imgdiv">
           <Slideshow />
         </div>

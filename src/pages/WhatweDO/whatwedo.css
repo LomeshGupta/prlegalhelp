@@ -25,8 +25,8 @@
 }
 
 .img1 {
-  width: 500px;
-  padding: 60px;
+  width: 30%;
+  /* padding: 60px; */
 }
 
 .head1 {
@@ -51,7 +51,12 @@
     padding: 5%;
     flex-direction: column;
   }
-  .head2{
+  .img1 {
+    margin-top: 40px;
+    width: 100%;
+    /* padding: 60px; */
+  }
+  .head2 {
     font-size: 19px;
   }
 }
