@@ -1,11 +1,21 @@
-.container {
-  display: flex;
-  width: 100%;
+.containerw {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 15px;
+  justify-content: space-between;
   align-items: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
 .cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  width: 70%;
 }
 
 .section2 {
@@ -31,5 +41,15 @@
 }
 
 .getin {
-    font-size: 30px;
+  font-size: 30px;
+}
+
+@media (max-width: 600px) {
+  .containerw {
+    padding: 5%;
+    flex-direction: column;
+  }
+  .head2{
+    font-size: 19px;
+  }
 }

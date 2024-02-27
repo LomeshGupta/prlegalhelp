@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
@@ -12,8 +12,26 @@ const Navbar = () => {
     setShowNavbar(!showNavbar);
   };
 
+  const [navbar, setNavbar] = useState(false);
+
+  //navbar scroll changeBackground function
+  const changeBackground = () => {
+    console.log(window.scrollY);
+    if (window.scrollY >= 66) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  useEffect(() => {
+    changeBackground();
+    // adding the event when scroll change background
+    window.addEventListener("scroll", changeBackground);
+  });
+
   return (
-    <nav className="navbar">
+    <nav className={navbar ? "navbar active" : "navbar"}>
       <div className="container">
         <div className="logo">
           {/* <Brand /> */}

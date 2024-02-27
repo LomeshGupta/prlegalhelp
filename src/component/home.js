@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "../pages/Navbar";
 import Home from "../pages/Home";
 import Whatwedo from "../pages/WhatweDO";
+import Ourexpertise from "../pages/ourexpertise";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Navbar />
       <Home />
       <Whatwedo />
+      <Ourexpertise />
     </>
   );
 };
