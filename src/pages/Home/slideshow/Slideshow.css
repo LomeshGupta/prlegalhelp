@@ -1,20 +1,25 @@
-/* Slideshow.css */
-
 .slideshow-container {
-  /* max-width: 96%;
-  margin: auto; */
-}
-
-/* Optional: Style for individual slides */
-.slick-slide {
-  /* text-align: center; */
-}
-
-/* Optional: Style for dots (pagination) */
-.slick-dots {
-  bottom: 10px;
-}
-
-.slick-dots li button:before {
-  /* color: #fff; Change dot color */
-}
+    max-width: 100%;
+    margin: 0;
+  }
+  
+  /* Optional: Style for individual slides */
+  .slick-slide {
+    text-align: center;
+    width: 100%;
+  
+  }
+  
+  .slick-track{
+    width: 100%;
+  }
+  
+  /* Optional: Style for dots (pagination) */
+  .slick-dots {
+    bottom: 20px;
+    position: absolute;
+  }
+  
+  .slick-dots li button:before {
+    color: #fff;
+  }

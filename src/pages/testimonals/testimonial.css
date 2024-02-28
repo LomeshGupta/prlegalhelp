@@ -16,6 +16,7 @@
   max-width: 420px;
   height: 400px;
   margin: auto;
+  margin-left: 14%;
   transition: all 0.3s ease-in;
 }
 

@@ -2,9 +2,9 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./Slideshow.css";
 import Home1 from "../../../assets/home1.png";
 import Home2 from "../../../assets/home2.png";
+import "./slideshow.css"
 
 const Slideshow = () => {
   const settings = {
@@ -46,8 +46,13 @@ const Slideshow = () => {
     <div className="slideshow-container">
       <Slider {...settings}>
         {images.map((imageUrl, index) => (
-          <div key={index}>
-            <img src={imageUrl.url} width="100%" alt={`Slide ${index + 1}`} />
+          <div key={index} className="slide">
+            <img
+              src={imageUrl.url}
+              width="100%"
+              style={{ objectFit: "cover" }}
+              alt={`Slide ${index + 1}`}
+            />
             <div className="heading">
               {imageUrl.h1}
               <br></br>

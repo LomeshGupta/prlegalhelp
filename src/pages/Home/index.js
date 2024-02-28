@@ -7,14 +7,12 @@ import Slideshow from "./slideshow";
 const Home = () => {
   return (
     <section class="section1">
-      <div className="con">
         <div class="imgdiv">
           <Slideshow />
         </div>
         <div class="imgdiv1">
           <img src={Home2} width="100%" alt="..." />
         </div>
-      </div>
     </section>
   );
 };

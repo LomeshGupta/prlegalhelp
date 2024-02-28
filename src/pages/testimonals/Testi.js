@@ -7,7 +7,7 @@ const Testimonial = ({ name, position, comment }) => {
   return (
     <div className="testimonial">
       <div className="img">
-        <img src={Svg} width="20%" />
+        <img src={Svg} width="0%" alt="..." />
       </div>
       <p className="comment">{comment}</p>
       <div className="info">
