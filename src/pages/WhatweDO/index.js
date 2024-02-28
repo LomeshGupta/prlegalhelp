@@ -9,13 +9,14 @@ const Home = () => {
     <section class="section2">
       <div className="containerw">
         <div className="cont">
-          <div className="head1">We know divorce is tough.</div>
+          <div className="head1">Putting Justice First</div>
           <div className="head2">
-            We work closely with our clients throughout every stage of what is
-            usually a long and tough ordeal so that they can accomplish their
-            goals and desires. With our combined experience of handling complex
-            trials and litigations for over 30 years, you can trust us to be
-            forthright and diligent in meeting your needs.
+            Putting Justice First encapsulates our unwavering commitment. Guided
+            by unwavering integrity and legal expertise, we relentlessly pursue
+            fairness. Our clients receive personalized support, ensuring each
+            case is approached with diligence, dedication, and the pursuit of
+            legal excellence, solidifying our standing as champions for justice
+            and client satisfaction.
           </div>
           <div className="getin">
             <a className="servicebtn" href="#" rel="noreferrer">
