@@ -4,54 +4,110 @@
   height: 100%;
   /* z-index: -1; */
   /* transform: translate(0,-10%); */
-}
+  .slide {
+    position: relative;
+    height: 100%; /* Adjust the height as needed */
+  }
 
-.slide {
-  position: relative;
-  height: 100%; /* Adjust the height as needed */
-}
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+  }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  text-align: center;
-}
+  .heading {
+    position: absolute;
+    top: 25%;
+    font-size: 400%;
+    color: #323232;
+    font-family: "EB Garamond";
+    left: 10%;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+  }
 
-.heading {
-  position: absolute;
-  top: 25%;
-  font-size: 400%;
-  color: #323232;
-  font-family: "EB Garamond";
-  left: 10%;
-  animation: 1s ease-out 0s 1 slideInFromLeft;
-}
+  .heading2 {
+    position: absolute;
+    top: 52%;
+    font-size: 200%;
+    color: #323232;
+    font-family: Sans-serif;
+    left: 17%;
+    animation: 2s ease-out 0s 1 slideInFromLeft;
+  }
 
-.heading2 {
-  position: absolute;
-  top: 52%;
-  font-size: 200%;
-  color: #323232;
-  font-family: Sans-serif;
-  left: 17%;
-  animation: 2s ease-out 0s 1 slideInFromLeft;
-}
+  .btn {
+    position: absolute;
+    top: 55%;
+    font-size: 200%;
+    color: #323232;
+    font-family: Sans-serif;
+    right: 10%;
+  }
+  
+  .imgdiv1 {
+    display: none;
+    width: 100%;
+  }
+  .imgdiv {
+    display: block;
+    /* width: 98%; */
+  }
 
-.btn {
-  position: absolute;
-  top: 55%;
-  font-size: 200%;
-  color: #323232;
-  font-family: Sans-serif;
-  right: 10%;
+  @media (max-width: 600px) {
+    .section1 {
+      width: 100%;
+    }
+    .imgdiv {
+      display: none;
+    }
+    .imgdiv1 {
+      display: block;
+    }
+    .heading {
+      font-size: 200%;
+      top: 30%;
+    }
+    .heading2 {
+      font-size: 80%;
+      top: 45%;
+      font-weight: 500;
+    }
+    .btn {
+      font-size: 130%;
+    }
+  }
+
+  @keyframes slideInFromLeft {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
 
 .servicebtn {
@@ -68,62 +124,14 @@
   cursor: pointer;
   transition: 1s;
 }
+
 .servicebtn:hover {
   background-color: #640000;
 }
-.imgdiv1 {
-  display: none;
-  width: 100%;
-}
-.imgdiv {
-  display: block;
-  /* width: 98%; */
-}
 
 @media (max-width: 600px) {
-  .section1 {
-    width: 100%;
-  }
-  .imgdiv {
-    display: none;
-  }
-  .imgdiv1 {
-    display: block;
-  }
-  .heading {
-    font-size: 200%;
-    top: 30%;
-  }
-  .heading2 {
-    font-size: 80%;
-    top: 45%;
-    font-weight: 500;
-  }
+  
   .btn {
     font-size: 130%;
-  }
-}
-
-@keyframes slideInFromLeft {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
   }
 }
