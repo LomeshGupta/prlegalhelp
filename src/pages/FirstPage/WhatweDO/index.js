@@ -1,8 +1,8 @@
 import React from "react";
-import Home2 from "../../assets/home1mobile.png";
+// import Home2 from "../../../assets/home1mobile.png";
 import "./whatwedo.css";
-import Slideshow from "../Home/slideshow";
-import Img1 from "../../assets/getintouch.jpg";
+// import Slideshow from "../Home/slideshow";
+import Img1 from "../../../assets/getintouch.jpg";
 
 const Home = () => {
   return (

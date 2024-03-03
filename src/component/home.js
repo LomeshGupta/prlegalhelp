@@ -1,11 +1,11 @@
 import React from "react";
-// import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "../pages/Navbar";
-import Home from "../pages/Home";
-import Whatwedo from "../pages/WhatweDO";
-import Ourexpertise from "../pages/ourexpertise";
-import Testimonial from "../pages/testimonals";
+
+import Navbar from "../pages/FirstPage/Navbar";
+import Home from "../pages/FirstPage/Home";
+import Whatwedo from "../pages/FirstPage/WhatweDO";
+import Ourexpertise from "../pages/FirstPage/ourexpertise";
+import Testimonial from "../pages/FirstPage/testimonals";
+import Ourservice from "../pages/FirstPage/ourservice";
 
 const App = () => {
   return (
@@ -14,6 +14,7 @@ const App = () => {
       <Home />
       <Whatwedo />
       <Ourexpertise />
+      <Ourservice />
       <Testimonial />
     </>
   );

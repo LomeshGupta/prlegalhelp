@@ -91,7 +91,7 @@
 
 .box.fourth {
   color: #f6f0f0;
-  background-image: url("../../assets/home1.jpg");
+  background-image: url("../../../assets/home1.jpg");
   background-size: 100% 200%;
   background-image: linear-gradient(to bottom, #003c64 50%, black 50%);
   -webkit-transition: background-position 1s;

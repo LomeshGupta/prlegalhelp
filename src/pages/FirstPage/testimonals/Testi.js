@@ -1,13 +1,13 @@
 // Testimonial.js
 
 import React from "react";
-import Svg from "../../assets/quotes.png";
+import Svg from "../../../assets/quotes.png";
 
 const Testimonial = ({ name, position, comment }) => {
   return (
     <div className="testimonial">
       <div className="img">
-        <img src={Svg} width="0%" alt="..." />
+        <img src={Svg} width="20%" alt="..." />
       </div>
       <p className="comment">{comment}</p>
       <div className="info">
