@@ -1,5 +1,6 @@
 .ourservice {
   position: relative;
+  padding: 3%;
   .slide {
     position: relative;
     height: 50vh;

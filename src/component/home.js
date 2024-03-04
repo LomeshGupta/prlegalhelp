@@ -6,6 +6,7 @@ import Whatwedo from "../pages/FirstPage/WhatweDO";
 import Ourexpertise from "../pages/FirstPage/ourexpertise";
 import Testimonial from "../pages/FirstPage/testimonals";
 import Ourservice from "../pages/FirstPage/ourservice";
+import Footer from "../pages/FirstPage/footer";
 
 const App = () => {
   return (
@@ -14,8 +15,9 @@ const App = () => {
       <Home />
       <Whatwedo />
       <Ourexpertise />
-      <Ourservice />
       <Testimonial />
+      <Ourservice />
+      <Footer />
     </>
   );
 };
