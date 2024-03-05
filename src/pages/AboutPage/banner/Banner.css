@@ -1,0 +1,35 @@
+.bannersection {
+  .banner {
+    position: relative;
+    height: 480px;
+    background-image: url("../../../assets/banner2.png");
+    color: #2b2525;
+    text-align: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .overlay {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  .labels {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .labels span {
+    font-size: 1rem;
+    color: #2b2525;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}

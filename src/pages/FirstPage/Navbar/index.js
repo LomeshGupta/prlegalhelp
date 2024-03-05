@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
+import logobg from "../../../assets/logobg.png";
 // import { ReactComponent as Brand } from '../../assets/icons/logo.svg'
 import "./nav.css";
 
@@ -34,8 +35,8 @@ const Navbar = () => {
     <nav className={navbar ? "navbar active" : "navbar"}>
       <div className="container">
         <div className="logo">
-          {/* <Brand /> */}
-          PR Legal Help
+          <img src={logobg} width="70px" alt=".." />
+          <p>PR Legal Help</p>
         </div>
         <div className="menu-icon" onClick={handleShowNavbar}>
           <GiHamburgerMenu />
@@ -48,18 +49,18 @@ const Navbar = () => {
               </div>
             </li>
             <li className="nav__item">
-              <NavLink to="/" rel="noreferrer" className="nav__link">
+              <NavLink to="/" className="nav__link">
                 Home
               </NavLink>
             </li>
             <li className="nav__item">
-              <NavLink to="/news" rel="noreferrer" className="nav__link">
-                News
+              <NavLink to="/About" className="nav__link">
+                About Us
               </NavLink>
             </li>
             <li className="nav__item">
               <NavLink to="/about-us" rel="noreferrer" className="nav__link">
-                About Us
+                Blogs
               </NavLink>
             </li>
             <li className="nav__item">

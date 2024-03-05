@@ -32,10 +32,15 @@ body {
 }
 
 .logo {
+  margin-top: auto;
   font-size: larger;
   font-family: "Poppins", sans-serif;
   color: black;
   font-weight: bold;
+  display: flex;
+  p{
+    margin-top: 8%;
+  }
 }
 
 .menu-icon {
