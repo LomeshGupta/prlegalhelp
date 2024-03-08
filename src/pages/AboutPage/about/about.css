@@ -43,12 +43,13 @@
     font-size: 1.2rem;
     color: #666;
   }
+
   @media screen and (max-width: 600px) {
     .section-with-images {
       display: flex;
       flex-direction: column;
     }
-    .left-image{
+    .left-image {
       padding: 0;
       padding-left: 50%;
     }

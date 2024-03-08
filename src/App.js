@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./component/home";
@@ -6,6 +6,7 @@ import About from "./component/about";
 // import News from "./pages/News";
 
 const App = () => {
+
   return (
     <Router>
       <Routes>

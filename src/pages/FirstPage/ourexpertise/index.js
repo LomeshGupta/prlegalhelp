@@ -1,6 +1,8 @@
 import { useState } from "react";
 // import Home2 from "../../assets/home1mobile.png";
 import "./expertise.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faScaleBalanced } from "@fortawesome/free-solid-svg-icons";
 // import Slideshow from "../Home/slideshow";
 // import Img1 from "../../assets/getintouch.jpg";
 
@@ -36,6 +38,7 @@ const Home = () => {
                   ? "Skilled in representing clients in civil disputes, trials, and appeals, ensuring their rights are protected."
                   : "Corporate Law"}
               </div>
+              <FontAwesomeIcon icon={faScaleBalanced} />
             </div>
             <div
               className={buttonBIsHovering ? "box second active" : "box second"}
@@ -44,8 +47,9 @@ const Home = () => {
               <div className="data">
                 {buttonBIsHovering
                   ? "Expertise in handling corporate legal matters including governance, compliance, and contract negotiation."
-                  : "Civil Litigation & Property Law"}
+                  : "Civil Litigation"}
               </div>
+              <FontAwesomeIcon icon={faScaleBalanced} />
             </div>
           </div>
           <div className="row">
@@ -58,6 +62,7 @@ const Home = () => {
                   ? "Specialized in family law &family-related issues, including marriage, divorce, child custody, adoption, and domestic violence."
                   : "Family Law"}
               </div>
+              <FontAwesomeIcon icon={faScaleBalanced} />
             </div>
             <div
               className={buttonDIsHovering ? "box fourth active" : "box fourth"}
@@ -68,6 +73,7 @@ const Home = () => {
                   ? "Specialized in Criminal Cases Pre-trial Representation, Negotiating Plea Bargains, Trial Defense,Appeals and Post-Conviction Relief"
                   : "Criminal Cases"}
               </div>
+              <FontAwesomeIcon icon={faScaleBalanced} />
             </div>
           </div>
         </div>

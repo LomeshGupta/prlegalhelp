@@ -25,6 +25,10 @@ const Navbar = () => {
     }
   };
 
+  const pageScroll = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   useEffect(() => {
     changeBackground();
     // adding the event when scroll change background
@@ -34,10 +38,12 @@ const Navbar = () => {
   return (
     <nav className={navbar ? "navbar active" : "navbar"}>
       <div className="container">
-        <div className="logo">
-          <img src={logobg} width="70px" alt=".." />
-          <p>PR Legal Help</p>
-        </div>
+        <NavLink to="/">
+          <div className="logo">
+            <img src={logobg} width="70px" alt=".." />
+            <p>PR Legal Help</p>
+          </div>
+        </NavLink>
         <div className="menu-icon" onClick={handleShowNavbar}>
           <GiHamburgerMenu />
         </div>
@@ -49,12 +55,12 @@ const Navbar = () => {
               </div>
             </li>
             <li className="nav__item">
-              <NavLink to="/" className="nav__link">
+              <NavLink to="/" onClick={pageScroll} className="nav__link">
                 Home
               </NavLink>
             </li>
             <li className="nav__item">
-              <NavLink to="/About" className="nav__link">
+              <NavLink to="/About" onClick={pageScroll} className="nav__link">
                 About Us
               </NavLink>
             </li>
