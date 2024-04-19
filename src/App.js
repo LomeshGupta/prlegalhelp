@@ -1,18 +1,26 @@
-import React, { useEffect } from "react";
-import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./component/home";
-import About from "./component/about";
-// import News from "./pages/News";
+// App.js
+import React, { Suspense } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./Navbar";
+import Home from "./Pages/Home";
 
 const App = () => {
-
   return (
     <Router>
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/About" element={<About />} />
-      </Routes>
+      <div>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </Suspense>
+
+        {/* <Route path="/about" component={AboutUs} />
+          <Route path="/professionals" component={Professionals} />
+          <Route path="/services" component={Services} />
+          <Route path="/blogs" component={Blogs} />
+          <Route path="/contact" component={ContactUs} /> */}
+      </div>
     </Router>
   );
 };
