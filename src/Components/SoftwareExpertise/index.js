@@ -15,7 +15,7 @@ const SoftwareExpertiseSection = () => {
   return (
     <div style={{ padding: "40px" }} className="soft" id="soft">
       <Typography variant="h4" gutterBottom>
-        Software Expertise
+        Our Legal Expertise
       </Typography>
       <Grid container spacing={2} className="grid">
         {softwareList.map((software, index) => (
