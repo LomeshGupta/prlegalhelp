@@ -1,13 +1,13 @@
 import React from "react";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import {
   AppBar,
   Toolbar,
   Typography,
   IconButton,
   Button,
-  Menu,
-  MenuItem,
+  // Menu,
+  // MenuItem,
   Drawer,
   List,
   ListItem,
@@ -22,35 +22,35 @@ import "./navbar.css";
 
 const Navbar = () => {
   const home = document.getElementById("home");
-  const box = document.getElementById("box");
-  const blogs = document.getElementById("blogs");
-  const soft = document.getElementById("soft");
-  const testi = document.getElementById("testi");
+  // const box = document.getElementById("box");
+  // const blogs = document.getElementById("blogs");
+  // const soft = document.getElementById("soft");
+  // const testi = document.getElementById("testi");
 
-  const handleScroll = (ref) => {
-    home.scrollIntoView({
-      behavior: "smooth",
-      block: "end",
-      inline: "nearest",
-    });
-  };
-  const handleScrolltobox = (ref) => {
-    box.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
-  };
-  const handleScrolltoblog = (ref) => {
-    blogs.scrollIntoView({
-      behavior: "smooth",
-      block: "end",
-      inline: "nearest",
-    });
-  };
-  const handleScrolltosoft = (ref) => {
-    soft.scrollIntoView({
-      behavior: "smooth",
-      block: "end",
-      inline: "nearest",
-    });
-  };
+  // const handleScroll = (ref) => {
+  //   home.scrollIntoView({
+  //     behavior: "smooth",
+  //     block: "end",
+  //     inline: "nearest",
+  //   });
+  // };
+  // const handleScrolltobox = (ref) => {
+  //   box.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+  // };
+  // const handleScrolltoblog = (ref) => {
+  //   blogs.scrollIntoView({
+  //     behavior: "smooth",
+  //     block: "end",
+  //     inline: "nearest",
+  //   });
+  // };
+  // const handleScrolltosoft = (ref) => {
+  //   soft.scrollIntoView({
+  //     behavior: "smooth",
+  //     block: "end",
+  //     inline: "nearest",
+  //   });
+  // };
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [drawerOpen, setDrawerOpen] = React.useState(false);

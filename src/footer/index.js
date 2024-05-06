@@ -4,10 +4,10 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import Mail from "@mui/icons-material/Mail";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import YouTubeIcon from "@mui/icons-material/YouTube";
-import textlogo from "../text-logo.png";
-import favicon from "../favicon.png";
-import { Margin } from "@mui/icons-material";
+// import YouTubeIcon from "@mui/icons-material/YouTube";
+// import textlogo from "../text-logo.png";
+// import favicon from "../favicon.png";
+// import { Margin } from "@mui/icons-material";
 
 const Footer = () => {
   const footerStyle = {

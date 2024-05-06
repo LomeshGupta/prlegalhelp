@@ -1,6 +1,6 @@
 import React from "react";
 import "./service.css";
-import Serviceimg from "../../Assets/images/services-page/banner.jpg";
+import Serviceimg from "../../assets/images/services-page/banner.jpg";
 
 const Home = () => {
   return (
@@ -14,7 +14,7 @@ const Home = () => {
           </p>
         </div>
         <div className="btn">
-          <a className="servicebtn">EXPLORE OUR SERVICE</a>
+          <button className="servicebtn">EXPLORE OUR SERVICE</button>
         </div>
       </div>
     </section>

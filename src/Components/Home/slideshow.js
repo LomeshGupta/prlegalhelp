@@ -5,28 +5,28 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 // import './SlideshowBanner.css';
-import Home1 from "../../Assets/images/banner/bann1.jpg";
-import Home2 from "../../Assets/images/banner/bann2.jpg";
-import Home3 from "../../Assets/images/banner/bann3.jpg";
+import home1 from "../../assets/images/banner/bann1.jpg";
+import home2 from "../../assets/images/banner/bann2.jpg";
+import home3 from "../../assets/images/banner/bann3.jpg";
 
 const SlideshowBanner = () => {
   const slides = [
     {
-      imageUrl: Home1,
+      imageUrl: home1,
       title: "Solving your <br />problems head-on",
       subtitle:
         "We provide you with direct and expert legal care <br />so that you can resolve issues early and amicably.",
       buttonText: "Explore Now",
     },
     {
-      imageUrl: Home2,
+      imageUrl: home2,
       title: "Directly addressing <br />your legal matter.",
       subtitle:
         "Expert legal guidance for issue resolution ensuring<br/>your peace of mind through strategic problem-solving.",
       buttonText: "Get Started",
     },
     {
-      imageUrl: Home3,
+      imageUrl: home3,
       title: "Confronting legal <br/>issues with precision.",
       subtitle:
         "Legal expertise for resolutions that prioritize <br/>your interests and foster amicable outcomes effectively.",
@@ -58,7 +58,7 @@ const SlideshowBanner = () => {
               <p dangerouslySetInnerHTML={{ __html: slide.subtitle }}></p>
             </div>
             <div className="btn">
-              <a className="servicebtn">{slide.buttonText}</a>
+              <button className="servicebtn">{slide.buttonText}</button>
             </div>
           </div>
         ))}

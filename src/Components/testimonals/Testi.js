@@ -1,7 +1,7 @@
 // Testimonial.js
 
 import React from "react";
-import Svg from "../../Assets/quotes.png";
+import Svg from "../../assets/quotes.png";;
 
 const Testimonial = ({ name, position, comment }) => {
   return (
