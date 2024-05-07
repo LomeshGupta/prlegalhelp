@@ -9,7 +9,7 @@ const AboutUs = () => {
                 backgroundImage: `url(${backgroundImage})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                height: '75 vh',
+                height: '75vh',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
