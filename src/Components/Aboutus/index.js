@@ -9,13 +9,13 @@ const AboutUs = () => {
                 backgroundImage: `url(${backgroundImage})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                height: '70vh',
+                height: '75 vh',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
                 textAlign: 'center',
-                padding: '20px',
+                padding: '50px',
                 margin: 0,
             }}
         >
@@ -23,10 +23,7 @@ const AboutUs = () => {
                 About Us
             </Typography>
             <Typography variant="body1" style={{ color: '#fff' }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus
-                diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.
-                Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.
-                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                At PR Legal Help, our unwavering dedication lies in providing unparalleled legal services meticulously tailored to cater to the multifaceted needs of our esteemed clients. As a prominent legal firm, we excel in an extensive spectrum of practice areas, extending comprehensive and innovative solutions to individuals, businesses, and organizations alike. With our wealth of experience and expertise, we are committed to navigating complex legal landscapes with precision, integrity, and a steadfast commitment to achieving favorable outcomes for our clients.
             </Typography>
         </div>
     );
