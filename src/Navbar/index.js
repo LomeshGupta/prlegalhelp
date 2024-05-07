@@ -1,13 +1,11 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import {
   AppBar,
   Toolbar,
   Typography,
   IconButton,
   Button,
-  // Menu,
-  // MenuItem,
   Drawer,
   List,
   ListItem,
@@ -21,77 +19,29 @@ import textlogo from "../text-logo.png";
 import "./navbar.css";
 
 const Navbar = () => {
-  const home = document.getElementById("home");
-  // const box = document.getElementById("box");
-  // const blogs = document.getElementById("blogs");
-  // const soft = document.getElementById("soft");
-  // const testi = document.getElementById("testi");
-
-  // const handleScroll = (ref) => {
-  //   home.scrollIntoView({
-  //     behavior: "smooth",
-  //     block: "end",
-  //     inline: "nearest",
-  //   });
-  // };
-  // const handleScrolltobox = (ref) => {
-  //   box.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
-  // };
-  // const handleScrolltoblog = (ref) => {
-  //   blogs.scrollIntoView({
-  //     behavior: "smooth",
-  //     block: "end",
-  //     inline: "nearest",
-  //   });
-  // };
-  // const handleScrolltosoft = (ref) => {
-  //   soft.scrollIntoView({
-  //     behavior: "smooth",
-  //     block: "end",
-  //     inline: "nearest",
-  //   });
-  // };
-
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const [drawerOpen, setDrawerOpen] = React.useState(false);
-
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+  const [navbar, setNavbar] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   const handleDrawerToggle = () => {
     setDrawerOpen(!drawerOpen);
   };
 
-  const [navbar, setNavbar] = useState(false);
-
-  //navbar scroll changeBackground function
   const changeBackground = () => {
-    console.log(window.scrollY);
-    if (window.scrollY >= 66) {
-      setNavbar(true);
-    } else {
-      setNavbar(false);
-    }
+    setNavbar(window.scrollY >= 66);
   };
 
   useEffect(() => {
     changeBackground();
-    // adding the event when scroll change background
     window.addEventListener("scroll", changeBackground);
-  });
+    return () => window.removeEventListener("scroll", changeBackground);
+  }, []);
 
   const menuItems = [
-    { text: "Home", onClick: handleClose },
-    { text: "About Us", onClick: handleClose },
-    { text: "Professionals", onClick: handleClose },
-    { text: "Our Services", onClick: handleClose },
-    { text: "Our Blogs", onClick: handleClose },
-    { text: "Contact Us", onClick: handleClose },
+    { text: "Home", path: "/" },
+    { text: "About Us", path: "/about-us" },
+    { text: "Our Blogs" },
+    { text: "Expertise" },
+    { text: "Testimonals" },
   ];
 
   return (
@@ -99,61 +49,31 @@ const Navbar = () => {
       <AppBar
         elevation={0}
         position="fixed"
-        sx={
-          navbar
-            ? "background-color:black; backdrop-filter: blur(10px); padding:10px"
-            : "background-color:transparent;color:'#fff' ;padding:10px;"
-        }>
+        sx={{
+          backgroundColor: navbar ? "black" : "transparent",
+          backdropFilter: navbar ? "blur(10px)" : "none",
+          padding: "10px",
+        }}
+      >
         <Toolbar>
-          <Typography variant="h2" style={{ flexGrow: 29 }}>
-            <img
-              src={favicon}
-              alt="Logo"
-              style={{ height: "40px", margin: "0px" }}
-            />
-            <img
-              src={textlogo}
-              alt="Logo-Name"
-              style={{ height: "50px", marginTop: "10px" }}
-            />
+          <Typography variant="h2" style={{ flexGrow: 1 }}>
+            <img src={favicon} alt="Logo" style={{ height: "40px", margin: "0px" }} />
+            <img src={textlogo} alt="Logo-Name" style={{ height: "50px", marginTop: "10px" }} />
           </Typography>
           <Hidden mdUp>
-            <IconButton sx="color:white" onClick={handleDrawerToggle}>
+            <IconButton color="inherit" onClick={handleDrawerToggle}>
               <MenuIcon />
             </IconButton>
           </Hidden>
           <Hidden smDown>
             <div className="nav-links">
-              <Button
-                style={{ color: "#fff", marginRight: "10px" }}>
-                Home
-              </Button>
-              <Button
-                style={{ color: "#fff", marginRight: "10px" }}>
-                About Us
-              </Button>
-              <Button
-                style={{ color: "#fff", marginRight: "10px" }}>
-                Our Blogs
-              </Button>
-              <Button
-                style={{ color: "#fff", marginRight: "10px" }}>
-                Expertise
-              </Button>
-              <Button
-                style={{ color: "#fff", marginRight: "10px" }}
-                >
-                Testimonals
-              </Button>
-              {/* <Button style={{ color: "black", marginRight: "10px" }}>
-                Contact Us
-              </Button> */}
+              {menuItems.map((item, index) => (
+                <Button key={index} component={Link} to={item.path} style={{ color: "#fff", marginRight: "10px" }}>
+                  {item.text}
+                </Button>
+              ))}
             </div>
-            <IconButton
-              sx="color:green"
-              aria-controls="whatsapp-menu"
-              aria-haspopup="true"
-              onClick={handleClick}>
+            <IconButton color="inherit">
               <WhatsAppIcon />
             </IconButton>
           </Hidden>
@@ -163,7 +83,7 @@ const Navbar = () => {
         <div style={{ width: 250 }}>
           <List>
             {menuItems.map((item, index) => (
-              <ListItem key={index} onClick={item.onClick}>
+              <ListItem key={index} button component={Link} to={item.path} onClick={handleDrawerToggle}>
                 <ListItemText primary={item.text} />
               </ListItem>
             ))}

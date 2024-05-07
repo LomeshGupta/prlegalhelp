@@ -3,6 +3,7 @@ import React, { Suspense } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./Navbar";
 import Home from "./Pages/Home";
+import About from "./Pages/About"
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about-us" element={<About />} />
           </Routes>
         </Suspense>
 
