@@ -39,9 +39,9 @@ const Navbar = () => {
   const menuItems = [
     { text: "Home", path: "/" },
     { text: "About Us", path: "/about-us" },
-    { text: "Our Blogs" },
-    { text: "Expertise" },
-    { text: "Testimonals" },
+    { text: "Attorneys", path:"/attorneys"},
+    { text: "Expertise", path:"/our-expertise" },
+    { text: "Contact Us" , path:"/contact-us"},
   ];
 
   return (

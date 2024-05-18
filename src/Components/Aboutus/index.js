@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Typography, Breadcrumbs, Link } from '@mui/material';
 import backgroundImage from '../../assets/images/about-us/read.jpg';
 
-const AboutUs = () => {
+const PageHeader = ({ pageTitle }) => {
     return (
         <div
             style={{
@@ -21,16 +21,16 @@ const AboutUs = () => {
             }}
         >
             <Typography variant="h2" gutterBottom style={{ color: '#fff' }}>
-                About Us
+                {pageTitle}
             </Typography>
             <Breadcrumbs color="#fff" aria-label="breadcrumb">
                 <Link color="#fff" href="/">
                     Home
                 </Link>
-                <Typography color="#fff">About</Typography>
+                <Typography color="#fff">{pageTitle}</Typography>
             </Breadcrumbs>
         </div>
     );
 }
 
-export default AboutUs;
+export default PageHeader;

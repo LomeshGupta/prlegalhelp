@@ -12,13 +12,14 @@ const SoftwareExpertiseSection = React.lazy(() =>
 );
 const Home2 = React.lazy(() => import("../../Components/ourservice"));
 const Footer = React.lazy(() => import("../../footer"));
+const Whyus = React.lazy(() => import("../../Components/Whyus"));
 
 function App() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <Home />
       <BoxSection />
-      {/* <BlogSlideshow /> */}
+      <Whyus />
       <SoftwareExpertiseSection />
       <TestimonialSection />
       <Home2 />

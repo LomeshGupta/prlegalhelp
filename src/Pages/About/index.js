@@ -9,7 +9,7 @@ const Whyus = React.lazy(() => import("../../Components/Whyus"));
 function App() {
     return (
         <Suspense fallback={<div>Loading...</div>}>
-            <AboutUs />
+            <AboutUs pageTitle="About Us" />
             <AboutData />
             <Whyus />
             <ServiceSection />

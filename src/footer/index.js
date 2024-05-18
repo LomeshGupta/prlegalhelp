@@ -57,25 +57,25 @@ const Footer = () => {
             <Grid container justifyContent="flex-end">
               <Grid item xs={6} sm={4} md={4}>
                 <Typography variant="h6" style={sectionStyle}>
-                  Company
+                  Site Links
                 </Typography>
                 <Grid container direction="column">
                   {/* Use RouterLink instead of Link */}
                   <RouterLink style={links} to="/about-us">
                     About Us
                   </RouterLink>
-                  <RouterLink style={links} to="#">
-                    Link 2
+                  <RouterLink style={links} to="/attorneys">
+                    Attorneys
                   </RouterLink>
-                  <RouterLink style={links} to="#">
-                    Link 3
+                  <RouterLink style={links} to="/our-expertise">
+                    Expertise
                   </RouterLink>
-                  <RouterLink style={links} to="#">
-                    Link 4
+                  <RouterLink style={links} to="/contact-us">
+                    Contact Us
                   </RouterLink>
-                  <RouterLink style={links} to="#">
+                  {/* <RouterLink style={links} to="#">
                     Link 5
-                  </RouterLink>
+                  </RouterLink> */}
                 </Grid>
               </Grid>
               <Grid item xs={12} sm={4} md={3}>

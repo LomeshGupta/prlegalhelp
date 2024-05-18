@@ -3,7 +3,11 @@ import React, { Suspense } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./Navbar";
 import Home from "./Pages/Home";
-import About from "./Pages/About"
+import About from "./Pages/About";
+import Attorney from "./Pages/Attorneys";
+import Contact from "./Pages/Contactus";
+import Expertise from "./Pages/Expertise";
+
 
 const App = () => {
   return (
@@ -14,6 +18,9 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about-us" element={<About />} />
+            <Route path="/attorneys" element={<Attorney />} />
+            <Route path="/contact-us" element={<Contact />} />
+            <Route path="/our-expertise" element={<Expertise />} />
           </Routes>
         </Suspense>
 
