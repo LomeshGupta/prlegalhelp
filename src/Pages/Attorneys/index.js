@@ -7,6 +7,8 @@ import member1 from "../../assets/images/professionals/member1.png";
 import member2 from "../../assets/images/professionals/member2.png";
 import member3 from "../../assets/images/professionals/member3.jpg";
 import member4 from "../../assets/images/professionals/member4.jpg";
+import member5 from "../../assets/images/professionals/member5.jpg";
+import member6 from "../../assets/images/professionals/member6.jpeg";
 
 const AboutUs = React.lazy(() => import("../../Components/Aboutus"));
 const Founder = React.lazy(() => import("../../Components/Founder"));
@@ -29,9 +31,7 @@ const founderData2 = {
     image: founimg2,
     name: 'Raju Chatterjee',
     title: 'Senior Attorney (Co-Founder)',
-    description: `Raju Chatterjee sounds like an impressive individual! His combination of an MBA in marketing and an LLB suggests a diverse skill set, blending business acumen with legal knowledge, which can be invaluable in the world of events and communications. It’s particularly impressive that he’s from a middle-class background but has managed to carve out a successful path for himself as an entrepreneur.
-
-    Given his background and the skills he's acquired, it’s understandable that he’s aiming high to achieve his goals. With a foundation in operations and a growing focus on client servicing, Raju seems to have a well-rounded approach to running his business, Puranshi Events and Communications. His determination and self-made success story likely serve as inspiration to many aspiring entrepreneurs.`,
+    description: `Raju Chatterjee, an accomplished entrepreneur, embodies resilience and talent. With an MBA in Marketing and an LLB, he offers a unique fusion of business acumen and legal expertise, enhancing his role as a consultant. His strategic marketing skills complement his legal understanding, ensuring clients receive both legal counsel and business insights. Raju's journey from modest beginnings to entrepreneurial success inspires aspiring business owners. His story underscores the importance of dedication, continuous learning, and skill integration in achieving remarkable feats. Raju's expertise and client-centric approach distinguish him in the legal consultancy realm, exemplifying the potential for success through perseverance and excellence.`,
 };
 
 const teamMembers = [
@@ -58,6 +58,18 @@ const teamMembers = [
       name: 'Hitesh Solanki',
       title: 'Associate Advocate',
       description: 'Hitesh Solanki, a 2020 law graduate from Guru Gobind Singh Indraprastha University, embarked on his legal journey during the lockdown by pursuing online judicial services classes. Despite parental expectations, his passion for criminal advocacy led him to enroll with the Bar Council of India in 2021. Currently, he passionately practices across all districts and the High Court of Delhi.',
+    },
+    {
+      image: member5,
+      name: 'Advocate Mehul Malhotra',
+      title: 'Associate Advocate',
+      description: 'Mehul Malhotra is an Advocate practicing in Delhi High Court with extensive experience in civil, criminal, divorce, maintenance, accident claims, and debt recovery cases. He handles Writ Petitions and Special Leave Petitions, delivering exceptional legal services and achieving favorable outcomes. Advocate Mehul is dedicated to justice and advocating his clients best interests.',
+    },
+    {
+      image: member6,
+      name: 'Advocate Hiteshi Kakkar',
+      title: 'Associate Advocate',
+      description: 'Advocate Hiteshi Kakkar is a legal professional with 5-6 years of extensive practice in High Courts, Tribunals, and the Supreme Court of India. Her versatile expertise spans multiple legal areas, providing comprehensive solutions. Committed to high-quality representation and positive outcomes, her dedication to justice and meticulous attention to detail make her a trusted advocate.',
     },
   ];
 

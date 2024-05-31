@@ -1,22 +1,22 @@
-import React, { useState } from 'react';
-import Grid from '@mui/material/Grid';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
-import Checkbox from '@mui/material/Checkbox';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import CssBaseline from '@mui/material/CssBaseline';
+import React, { useState } from "react";
+import Grid from "@mui/material/Grid";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardActions from "@mui/material/CardActions";
+import Checkbox from "@mui/material/Checkbox";
+import FormControlLabel from "@mui/material/FormControlLabel";
+// import CssBaseline from "@mui/material/CssBaseline";
 
 const ContactFormCard = () => {
   const [formData, setFormData] = useState({
-    userName: '',
-    email: '',
-    phone: '',
-    message: '',
-    subscribe: false
+    userName: "",
+    email: "",
+    phone: "",
+    message: "",
+    subscribe: false,
   });
 
   const handleChange = (e) => {
@@ -30,18 +30,30 @@ const ContactFormCard = () => {
     // Add your form submission logic here
     // Reset form fields
     setFormData({
-      userName: '',
-      email: '',
-      phone: '',
-      message: '',
-      subscribe: false
+      userName: "",
+      email: "",
+      phone: "",
+      message: "",
+      subscribe: false,
     });
   };
 
   return (
-    <Card sx={{ display: 'flex', flexDirection: 'row', width: '80%', margin: 'auto', marginTop: 8, marginBottom: 8 }}>
+    <Card
+      sx={{
+        display: "flex",
+        flexDirection: "row",
+        width: "80%",
+        margin: "auto",
+        marginTop: 8,
+        marginBottom: 8,
+        "@media (max-width: 600px)": {
+          flexDirection: "column",
+        },
+      }}
+    >
       <CardContent>
-        <CssBaseline />
+        {/* <CssBaseline /> */}
         <Typography variant="h4" gutterBottom>
           Send a Message
         </Typography>
@@ -98,7 +110,14 @@ const ContactFormCard = () => {
             </Grid>
             <Grid item xs={12}>
               <FormControlLabel
-                control={<Checkbox checked={formData.subscribe} onChange={handleChange} name="subscribe" color="primary" />}
+                control={
+                  <Checkbox
+                    checked={formData.subscribe}
+                    onChange={handleChange}
+                    name="subscribe"
+                    color="primary"
+                  />
+                }
                 label="Free useful legal news and information for creative businesses sent every month? Sign me up!"
               />
             </Grid>
@@ -113,9 +132,12 @@ const ContactFormCard = () => {
                 "&:hover": {
                   backgroundColor: "#996515",
                 },
-                fontSize:"17px",
-                width:"30%",
-                margin:"40px"
+                fontSize: "17px",
+                width: "30%",
+                margin: "40px",
+                "@media (max-width: 600px)": {
+                  width: "70%",
+                }
               }}
             >
               Talk to Us
@@ -129,7 +151,7 @@ const ContactFormCard = () => {
         </Typography>
         <br></br>
         <Typography variant="h6" gutterBottom>
-        If you made it this far, you’re our type of person. Let’s talk.
+          If you made it this far, you’re our type of person. Let’s talk.
         </Typography>
         <br></br>
         <Typography variant="body1" gutterBottom>
@@ -142,7 +164,8 @@ const ContactFormCard = () => {
           Address
         </Typography>
         <Typography variant="body1" gutterBottom>
-        Office no 506 ,5th floor Ansal majistic tower , Ak market ,Vikaspuri. New Delhi-110019
+          Office no 506 ,5th floor Ansal majistic tower , Ak market ,Vikaspuri.
+          New Delhi-110019
         </Typography>
       </CardContent>
     </Card>

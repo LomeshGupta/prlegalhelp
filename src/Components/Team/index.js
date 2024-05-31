@@ -10,7 +10,7 @@ const Team = ({ members }) => {
       </Typography>
       <Grid container spacing={4} paddingBottom="20px">
         {members.map((member, index) => (
-          <Grid item xs={12} sm={6} md={3} key={index}>
+          <Grid item xs={12} sm={6} md={4} key={index}>
             <TeamMember
               image={member.image}
               name={member.name}
