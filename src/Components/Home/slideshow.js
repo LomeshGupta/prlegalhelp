@@ -4,6 +4,8 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 // import './SlideshowBanner.css';
 import home1 from "../../assets/images/banner/bann1.jpg";
 import home2 from "../../assets/images/banner/bann2.jpg";
@@ -58,7 +60,7 @@ const SlideshowBanner = () => {
               <p dangerouslySetInnerHTML={{ __html: slide.subtitle }}></p>
             </div>
             <div className="btn">
-              <button className="servicebtn">{slide.buttonText}</button>
+              <Button className="servicebtn" component={Link} to="/our-expertise">{slide.buttonText}</Button>
             </div>
           </div>
         ))}

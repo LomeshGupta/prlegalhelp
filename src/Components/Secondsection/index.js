@@ -3,6 +3,7 @@ import { Grid, Button, Typography } from "@mui/material";
 import SecurityIcon from "@mui/icons-material/Security";
 import BuildIcon from "@mui/icons-material/Build";
 import BusinessIcon from "@mui/icons-material/Business";
+import { Link } from "react-router-dom";
 import "./boxsec.css";
 
 const BoxSection = () => {
@@ -11,9 +12,9 @@ const BoxSection = () => {
       {/* Box 1 */}
       <Grid item xs={12} sm={4} position="relative">
         <Box
-          icon={<BuildIcon fontSize="large" />}
-          title="How We Do"
-          subtitle="A team imbibed on professional pillars of trust, integrity, client focus and social value."
+          icon={<BusinessIcon fontSize="large" />}
+          title="What We Do"
+          subtitle="Lead by experts having vast experience and specialisation in their core fields"
           backgr="black"
           color="#fff"
         />
@@ -22,9 +23,9 @@ const BoxSection = () => {
       {/* Box 2 */}
       <Grid item xs={12} sm={4} position="relative">
         <Box
-          icon={<BusinessIcon fontSize="large" />}
-          title="What We Do"
-          subtitle="Lead by experts having vast experience and specialisation in their core fields"
+          icon={<BuildIcon fontSize="large" />}
+          title="How We Do"
+          subtitle="A team imbibed on professional pillars of trust, integrity, client focus and social value."
           backgr="#fff"
           color="black"
         />
@@ -56,7 +57,8 @@ const Box = ({ icon, title, subtitle, backgr, color }) => {
         borderRadius: "5%",
         margin: "20px",
         color: color,
-      }}>
+      }}
+    >
       <div className="icon" style={{ marginBottom: "40px" }}>
         {icon}
       </div>
@@ -66,7 +68,10 @@ const Box = ({ icon, title, subtitle, backgr, color }) => {
       <Typography variant="body1">{subtitle}</Typography>
       <Button
         variant="contained"
-        style={{ marginTop: "1rem", backgroundColor: "#996515" }}>
+        style={{ marginTop: "1rem", backgroundColor: "#996515" }}
+        component= {Link}
+        to="/about-us"
+      >
         Learn More
       </Button>
     </div>

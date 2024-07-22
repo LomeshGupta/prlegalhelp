@@ -1,11 +1,19 @@
-// src/components/TeamMember.js
-
 import React from 'react';
 import { Card, CardContent, CardMedia, Typography } from '@mui/material';
 
 const TeamMember = ({ image, name, title, description }) => {
   return (
-    <Card sx={{ boxShadow: 3, borderRadius: 2 }}>
+    <Card
+      sx={{
+        boxShadow: 3,
+        borderRadius: 2,
+        height: '100%',
+        transition: 'all 0.3s ease',
+        '&:hover': {
+          boxShadow: 15,
+        },
+      }}
+    >
       <CardMedia
         component="img"
         image={image}

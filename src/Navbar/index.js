@@ -39,9 +39,9 @@ const Navbar = () => {
   const menuItems = [
     { text: "Home", path: "/" },
     { text: "About Us", path: "/about-us" },
-    { text: "Attorneys", path:"/attorneys"},
-    { text: "Expertise", path:"/our-expertise" },
-    { text: "Contact Us" , path:"/contact-us"},
+    { text: "Attorneys", path: "/attorneys" },
+    { text: "Expertise", path: "/our-expertise" },
+    { text: "Contact Us", path: "/contact-us" },
   ];
 
   return (
@@ -56,10 +56,22 @@ const Navbar = () => {
         }}
       >
         <Toolbar>
-          <Typography variant="h2" style={{ flexGrow: 1 }}>
-            <img src={favicon} alt="Logo" style={{ height: "40px", margin: "0px" }} />
-            <img src={textlogo} alt="Logo-Name" style={{ height: "50px", marginTop: "10px" }} />
-          </Typography>
+          
+            <Typography variant="h2" style={{ flexGrow: 1 }}>
+            <Button component={Link} to="/">
+              <img
+                src={favicon}
+                alt="Logo"
+                style={{ height: "40px", margin: "0px" }}
+              />
+              <img
+                src={textlogo}
+                alt="Logo-Name"
+                style={{ height: "50px", marginTop: "10px" }}
+              />
+              </Button>
+            </Typography>
+          
           <Hidden mdUp>
             <IconButton color="inherit" onClick={handleDrawerToggle}>
               <MenuIcon />
@@ -68,7 +80,12 @@ const Navbar = () => {
           <Hidden smDown>
             <div className="nav-links">
               {menuItems.map((item, index) => (
-                <Button key={index} component={Link} to={item.path} style={{ color: "#fff", marginRight: "10px" }}>
+                <Button
+                  key={index}
+                  component={Link}
+                  to={item.path}
+                  style={{ color: "#fff", marginRight: "10px" }}
+                >
                   {item.text}
                 </Button>
               ))}
@@ -83,7 +100,13 @@ const Navbar = () => {
         <div style={{ width: 250 }}>
           <List>
             {menuItems.map((item, index) => (
-              <ListItem key={index} button component={Link} to={item.path} onClick={handleDrawerToggle}>
+              <ListItem
+                key={index}
+                button
+                component={Link}
+                to={item.path}
+                onClick={handleDrawerToggle}
+              >
                 <ListItemText primary={item.text} />
               </ListItem>
             ))}
