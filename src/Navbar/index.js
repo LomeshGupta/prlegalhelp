@@ -56,8 +56,7 @@ const Navbar = () => {
         }}
       >
         <Toolbar>
-          
-            <Typography variant="h2" style={{ flexGrow: 1 }}>
+          <Typography variant="h2" style={{ flexGrow: 1 }}>
             <Button component={Link} to="/">
               <img
                 src={favicon}
@@ -69,9 +68,9 @@ const Navbar = () => {
                 alt="Logo-Name"
                 style={{ height: "50px", marginTop: "10px" }}
               />
-              </Button>
-            </Typography>
-          
+            </Button>
+          </Typography>
+
           <Hidden mdUp>
             <IconButton color="inherit" onClick={handleDrawerToggle}>
               <MenuIcon />
