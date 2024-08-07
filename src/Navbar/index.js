@@ -58,16 +58,26 @@ const Navbar = () => {
         <Toolbar>
           <Typography variant="h2" style={{ flexGrow: 1 }}>
             <Button component={Link} to="/">
-              <img
-                src={favicon}
-                alt="Logo"
-                style={{ height: "40px", margin: "0px" }}
-              />
-              <img
-                src={textlogo}
-                alt="Logo-Name"
-                style={{ height: "50px", marginTop: "10px" }}
-              />
+              <div className="gold-glow">
+                <img
+                  src={favicon}
+                  alt="Logo"
+                  style={{
+                    height: "50px",
+                    margin: "0px",
+                    filter: "drop-shadow(0 0 3px gold)",
+                  }}
+                />
+                <img
+                  src={textlogo}
+                  alt="Logo-Name"
+                  style={{
+                    height: "50px",
+                    marginTop: "10px",
+                    filter: "drop-shadow(0 0 5px black)",
+                  }}
+                />
+              </div>
             </Button>
           </Typography>
 
@@ -90,7 +100,12 @@ const Navbar = () => {
               ))}
             </div>
             <IconButton color="inherit">
-              <WhatsAppIcon />
+              <a
+                style={{ textDecoration: "none", color: "green" }}
+                href="https://wa.me/+919643501636?text=I'm%20here%20for%20some%20Legal%20Advise"
+              >
+                <WhatsAppIcon />
+              </a>
             </IconButton>
           </Hidden>
         </Toolbar>

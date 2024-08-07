@@ -7,7 +7,7 @@ import About from "./Pages/About";
 import Attorney from "./Pages/Attorneys";
 import Contact from "./Pages/Contactus";
 import Expertise from "./Pages/Expertise";
-
+import ScrollToTop from "./ScrollToTop.js";
 
 const App = () => {
   return (
@@ -15,6 +15,7 @@ const App = () => {
       <div>
         <Suspense fallback={<div>Loading...</div>}>
           <Navbar />
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about-us" element={<About />} />

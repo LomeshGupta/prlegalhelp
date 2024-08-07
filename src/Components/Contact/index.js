@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
@@ -8,11 +8,15 @@ import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
-// import CssBaseline from "@mui/material/CssBaseline";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ContactFormCard = () => {
+  const form = useRef();
   const [formData, setFormData] = useState({
-    userName: "",
+    name: "",
+    from_name: "",
     email: "",
     phone: "",
     message: "",
@@ -21,21 +25,40 @@ const ContactFormCard = () => {
 
   const handleChange = (e) => {
     const { name, value, checked } = e.target;
-    setFormData({ ...formData, [name]: value || checked });
+    setFormData({
+      ...formData,
+      [name]: name === "subscribe" ? checked : value,
+      ...(name === "name" && { from_name: value }), // Synchronize from_name with name
+    });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData); // Logging form data
-    // Add your form submission logic here
-    // Reset form fields
-    setFormData({
-      userName: "",
-      email: "",
-      phone: "",
-      message: "",
-      subscribe: false,
-    });
+
+    emailjs
+      .sendForm(
+        "service_7hf495s",
+        "template_sb4h627",
+        form.current,
+        "1iH__A9UU69Je6fGy"
+      )
+      .then(
+        () => {
+          toast.success("Form Submitted Successfully!");
+          setFormData({
+            name: "",
+            from_name: "",
+            email: "",
+            phone: "",
+            message: "",
+            subscribe: false,
+          });
+        },
+        (error) => {
+          toast.error("Failed to submit the form. Please try again.");
+          console.error("Form submission error: ", error.text);
+        }
+      );
   };
 
   return (
@@ -53,11 +76,10 @@ const ContactFormCard = () => {
       }}
     >
       <CardContent>
-        {/* <CssBaseline /> */}
         <Typography variant="h4" gutterBottom>
           Send a Message
         </Typography>
-        <form onSubmit={handleSubmit}>
+        <form ref={form} onSubmit={handleSubmit}>
           <Grid container spacing={1} padding="20px">
             <Grid item xs={12}>
               <TextField
@@ -65,10 +87,15 @@ const ContactFormCard = () => {
                 required
                 id="name"
                 label="Name"
-                name="userName"
-                value={formData.userName}
+                name="name"
+                value={formData.name}
                 onChange={handleChange}
                 margin="normal"
+              />
+              <input
+                type="hidden"
+                name="from_name"
+                value={formData.from_name}
               />
             </Grid>
             <Grid item xs={12}>
@@ -137,7 +164,7 @@ const ContactFormCard = () => {
                 margin: "40px",
                 "@media (max-width: 600px)": {
                   width: "70%",
-                }
+                },
               }}
             >
               Talk to Us
@@ -149,25 +176,26 @@ const ContactFormCard = () => {
         <Typography variant="h4" gutterBottom>
           Reach Out
         </Typography>
-        <br></br>
+        <br />
         <Typography variant="h6" gutterBottom>
           If you made it this far, you’re our type of person. Let’s talk.
         </Typography>
-        <br></br>
+        <br />
         <Typography variant="body1" gutterBottom>
           Email: info@prlegalhelp.com
         </Typography>
         <Typography variant="body1" gutterBottom>
-          Phone: +91-9718516363
+          Phone: 9643501636, 9718516363
         </Typography>
         <Typography variant="h5" gutterBottom>
           Address
         </Typography>
         <Typography variant="body1" gutterBottom>
-          Office no 506 ,5th floor Ansal majistic tower , Ak market ,Vikaspuri.
+          Office no 506, 5th floor Ansal Majestic Tower, AK Market, Vikaspuri,
           New Delhi-110019
         </Typography>
       </CardContent>
+      <ToastContainer />
     </Card>
   );
 };

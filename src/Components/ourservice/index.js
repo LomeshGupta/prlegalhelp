@@ -1,6 +1,7 @@
 import React from "react";
 import "./service.css";
 import Serviceimg from "../../assets/images/services-page/banner.jpg";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -9,12 +10,14 @@ const Home = () => {
         <img src={Serviceimg} alt=".." />
         <div className="overlay">
           <p>
-            Expert Legal and Business Consulting with 14 Years of Global
-            Experience
+            Strategic Legal and Business Consulting with a Global Perspective
+            and Proven Expertise
           </p>
         </div>
         <div className="btn">
-          <button className="servicebtn">EXPLORE OUR SERVICE</button>
+          <Link to="/our-expertise">
+            <button className="servicebtn">EXPLORE OUR SERVICE</button>
+          </Link>
         </div>
       </div>
     </section>

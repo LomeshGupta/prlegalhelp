@@ -46,11 +46,10 @@ const Footer = () => {
               PR LEGAL HELP
             </Typography>
             <Typography variant="p">
-              Best LEGAL Advisor Around PR LEGAL HELP is a dedicated
-              supplier of legal service to legal professionals & Firms
-              in ireland, UK, Dubai, USA headquartered in Delhi, India, with a
-              focus on delivering exceptional outsourcing services to our
-              clients.
+              PR Legal Help, based in Delhi, offers expert legal solutions with
+              integrity. Our experienced team specializes in corporate law,
+              litigation, and personal matters, delivering tailored services to
+              meet your needs. Contact us to see how we can assist you.
             </Typography>
           </Grid>
           <Grid item xs={12} md={6}>
@@ -86,26 +85,30 @@ const Footer = () => {
                   <IconButton
                     href="#"
                     target="_blank"
-                    rel="noopener noreferrer">
+                    rel="noopener noreferrer"
+                  >
                     <FacebookIcon style={{ color: "#fff" }} />
                   </IconButton>
                   <IconButton
                     href="#"
                     target="_blank"
                     color="#fff"
-                    rel="noopener noreferrer">
+                    rel="noopener noreferrer"
+                  >
                     <Mail style={{ color: "#fff" }} />
                   </IconButton>
                   <IconButton
                     href="#"
                     target="_blank"
-                    rel="noopener noreferrer">
+                    rel="noopener noreferrer"
+                  >
                     <InstagramIcon style={{ color: "#fff" }} />
                   </IconButton>
                   <IconButton
                     href="#"
                     target="_blank"
-                    rel="noopener noreferrer">
+                    rel="noopener noreferrer"
+                  >
                     <LinkedInIcon style={{ color: "#fff" }} />
                   </IconButton>
                 </div>
