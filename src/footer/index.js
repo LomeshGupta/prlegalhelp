@@ -83,7 +83,7 @@ const Footer = () => {
                 </Typography>
                 <div style={socialContainerStyle}>
                   <IconButton
-                    href="#"
+                    href="https://www.facebook.com/profile.php?id=61554854935301&mibextid=LQQJ4d"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
