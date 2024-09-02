@@ -90,7 +90,7 @@ const Footer = () => {
                     <FacebookIcon style={{ color: "#fff" }} />
                   </IconButton>
                   <IconButton
-                    href="#"
+                    href="mailto:contact@prlegalhelps.com"
                     target="_blank"
                     color="#fff"
                     rel="noopener noreferrer"
