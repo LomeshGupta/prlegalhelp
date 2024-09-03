@@ -3,7 +3,7 @@ import { Container, Grid, Typography, Link, IconButton } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom"; // Import Link from react-router-dom
 import FacebookIcon from "@mui/icons-material/Facebook";
 import Mail from "@mui/icons-material/Mail";
-import InstagramIcon from "@mui/icons-material/Instagram";
+import Youtube from "@mui/icons-material/YouTube";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const Footer = () => {
@@ -98,14 +98,14 @@ const Footer = () => {
                     <Mail style={{ color: "#fff" }} />
                   </IconButton>
                   <IconButton
-                    href="#"
+                    href="https://www.youtube.com/@advocatepoonamrimal"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <InstagramIcon style={{ color: "#fff" }} />
+                    <Youtube style={{ color: "#fff" }} />
                   </IconButton>
                   <IconButton
-                    href="#"
+                    href="https://www.linkedin.com/company/101625161/admin/dashboard/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
