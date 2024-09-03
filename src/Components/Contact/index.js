@@ -182,7 +182,7 @@ const ContactFormCard = () => {
         </Typography>
         <br />
         <Typography variant="body1" gutterBottom>
-          Email: Contact@prlegalhelp.com
+          Email: contact@prlegalhelp.com
         </Typography>
         <Typography variant="body1" gutterBottom>
           Phone: 9643501636, 9718516363
